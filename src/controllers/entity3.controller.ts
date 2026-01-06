@@ -17,7 +17,7 @@ export async function createEntity3(req: Request, res: Response) {
     authorId: data.authorId,
     type: data.type,
     title: data.title,
-    message: (req.body as { message?: string }).message ?? null/
+    message: req.body.message ?? null,
     occurredAt,
     payload: data.payload,
   });
